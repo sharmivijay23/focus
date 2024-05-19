@@ -7,6 +7,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import OptionBar from "../containers/OptionBar";
 import ClockContainer from "../containers/ClockContainer";
 import MusicPlayerContainer from "../containers/MusicPlayerContainer";
+import SettingsContainer from "../containers/SettingsContainer";
 
 export function Index() {
   const bgUrl = "/assets/backgrounds/in/temple.png";
@@ -19,6 +20,7 @@ export function Index() {
       <ClockContainer />
       <OptionBar />
       <MusicPlayerContainer />
+      <SettingsContainer />
     </div>
   } else {
     view = <div className='flex w-full h-full justify-center items-center'><NameForm /></div>

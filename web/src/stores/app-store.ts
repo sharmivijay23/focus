@@ -10,12 +10,14 @@ interface IAppState {
   username: string | undefined,
   activeMode: Mode,
   showMusicPlayer: boolean,
+  showSettingsContent: boolean,
 }
 
 interface IAppActions {
   setUsername: (username: string) => void
   setActiveMode: (activeMode: Mode) => void
   setShowMusicPlayer: (showMusicPlayer: boolean) => void
+  setShowSettingsContent: (showSettingsContent: boolean) => void
 }
 
 interface IAppStore extends IAppState, IAppActions { }
@@ -28,6 +30,7 @@ const useAppStore = create<IAppStore>()(persist((set) => ({
   username: undefined,
   activeMode: Mode.Home,
   showMusicPlayer: false,
+  showSettingsContent: false,
   quoteStore: {
     quote: "Believe you can and you're halfway there. ",
     author: "Theodore Roosevelt",
@@ -37,6 +40,10 @@ const useAppStore = create<IAppStore>()(persist((set) => ({
   setShowMusicPlayer: (showMusicPlayer: boolean) => {
     console.log("setShowMusicPlayer", showMusicPlayer)
     set({ showMusicPlayer })
+  },
+  setShowSettingsContent: (showSettingsContent: boolean) => {
+    console.log("showSettings", showSettingsContent)
+    set({ showSettingsContent })
   },
   weekDayQuotes: {
     day: "Friday",
