@@ -1,9 +1,11 @@
 'use client'
 
+
 import NameForm from "../containers/NameForm";
 import QuoteContainer from "../containers/QuoteContainer";
 import useAppStore from "../stores/app-store";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useState } from "react";
 import OptionBar from "../containers/OptionBar";
 
 export function Index() {
