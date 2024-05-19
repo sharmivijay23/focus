@@ -1,13 +1,12 @@
 'use client'
 
-
 import NameForm from "../containers/NameForm";
 import QuoteContainer from "../containers/QuoteContainer";
 import useAppStore from "../stores/app-store";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useState } from "react";
 import OptionBar from "../containers/OptionBar";
 import ClockContainer from "../containers/ClockContainer";
+import MusicPlayerContainer from "../containers/MusicPlayerContainer";
 
 export function Index() {
   const bgUrl = "/assets/backgrounds/in/temple.png";
@@ -19,6 +18,7 @@ export function Index() {
       <QuoteContainer />
       <ClockContainer />
       <OptionBar />
+      <MusicPlayerContainer />
     </div>
   } else {
     view = <div className='flex w-full h-full justify-center items-center'><NameForm /></div>

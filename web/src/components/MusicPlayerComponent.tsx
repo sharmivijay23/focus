@@ -1,10 +1,13 @@
 import { Drawer } from "flowbite-react";
 
-const MusicPlayerComponent = () => {
-  // TODO: Update open
-  // TODO: Update onClose
+export interface IMusicPlayerComponentProps {
+  show: boolean;
+  handleHide: () => void;
+}
+
+const MusicPlayerComponent = ({ show, handleHide }: IMusicPlayerComponentProps) => {
   return (
-    <Drawer open={false} onClose={() => {}} className="px-0 flex flex-col justify-between">
+    <Drawer open={show} onClose={handleHide} className="px-0 flex flex-col justify-between">
       <Drawer.Header className="px-4" title="Music" titleIcon={() => <></>} />
       <Drawer.Items className="flex flex-col items-center justify-end h-1/2">
         <iframe
@@ -12,7 +15,7 @@ const MusicPlayerComponent = () => {
           width="90%"
           height="80%"
           allowFullScreen={false}
-          loading="lazy">            
+          loading="lazy">
         </iframe>
       </Drawer.Items>
     </Drawer>
