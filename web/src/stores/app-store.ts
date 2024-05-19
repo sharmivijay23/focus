@@ -19,6 +19,15 @@ interface IAppState {
   iterationsBeforeLongBreak: number,
   pomodoro?: Pomodoro,
   showSettingsContent: boolean,
+  weekDayQuotes: {
+    day: string,
+    stat1: string,
+    stat2: string,
+  },
+  quoteStore: {
+    quote: string,
+    author: string,
+  },
 }
 
 interface IAppActions {
