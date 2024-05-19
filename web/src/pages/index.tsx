@@ -7,17 +7,22 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import OptionBar from "../containers/OptionBar";
 import ClockContainer from "../containers/ClockContainer";
 import MusicPlayerContainer from "../containers/MusicPlayerContainer";
+import { getBackgroundById } from "../utils/background-utils";
+import PomodoroContainer from "../containers/PomodoroContainer";
+import PomodoroHelper from "../components/PomodoroHelper";
 import SettingsContainer from "../containers/SettingsContainer";
 
 export function Index() {
-  const bgUrl = "/assets/backgrounds/in/temple.png";
-  const { username } = useAppStore();
+  const { username, activeBackground } = useAppStore();
+  const bgUrl = getBackgroundById(activeBackground);
 
   let view = null;
   if (username) {
     view = <div className="h-full flex flex-col justify-between">
+      <PomodoroHelper />
       <QuoteContainer />
       <ClockContainer />
+      <PomodoroContainer />
       <OptionBar />
       <MusicPlayerContainer />
       <SettingsContainer />
@@ -33,7 +38,7 @@ export function Index() {
   );
 }
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, [
