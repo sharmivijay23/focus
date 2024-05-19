@@ -7,6 +7,7 @@ import useAppStore from "../stores/app-store";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useState } from "react";
 import OptionBar from "../containers/OptionBar";
+import ClockContainer from "../containers/ClockContainer";
 
 export function Index() {
   const bgUrl = "/assets/backgrounds/in/temple.png";
@@ -14,8 +15,9 @@ export function Index() {
 
   let view = null;
   if (username) {
-    view = <div>
+    view = <div className="h-full flex flex-col justify-between">
       <QuoteContainer />
+      <ClockContainer />
       <OptionBar />
     </div>
   } else {
