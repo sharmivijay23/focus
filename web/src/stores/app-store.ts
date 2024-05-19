@@ -18,6 +18,7 @@ interface IAppState {
   longBreakMinutes: number,
   iterationsBeforeLongBreak: number,
   pomodoro?: Pomodoro,
+  showSettingsContent: boolean,
 }
 
 interface IAppActions {
@@ -32,6 +33,7 @@ interface IAppActions {
   pausePomodoro: () => void
   resetPomodoro: () => void
   updatePomodoro: () => void
+  setShowSettingsContent: (showSettingsContent: boolean) => void
 }
 
 interface IAppStore extends IAppState, IAppActions { }
@@ -61,6 +63,7 @@ const useAppStore = create<IAppStore>()(persist((set, get) => ({
     pomodoroMode: PomodoroMode.Task,
     timerMode: TimerMode.Stopped,
   },
+  showSettingsContent: false,
   quoteStore: {
     quote: "Believe you can and you're halfway there. ",
     author: "Theodore Roosevelt",
@@ -147,6 +150,7 @@ const useAppStore = create<IAppStore>()(persist((set, get) => ({
       set({ pomodoro: { ...pomodoro, remainingMs, lastTick: now } })
     }
   },
+  setShowSettingsContent: (showSettingsContent: boolean) => set({ showSettingsContent }),
   weekDayQuotes: {
     day: "Friday",
     stat1: "Fantastic Friday",

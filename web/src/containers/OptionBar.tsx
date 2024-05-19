@@ -8,14 +8,19 @@ import ModeButtonGroupContainer from "./ModeButtonGroupContainer";
 
 const OptionBar = () => {
   const setShowMusicPlayer = useAppStore(state => state.setShowMusicPlayer)
+  const { setShowSettingsContent } = useAppStore()
   const showMusicPlayer = useCallback(() => {
     setShowMusicPlayer(true)
   }, [setShowMusicPlayer])
+  const showSettingsContent = useCallback(() => {
+    setShowSettingsContent(true)
+  }, [setShowSettingsContent]
+  )
 
   const iconClasses = "h-7 w-5"
 
   return (
-    <div className="flex justify-between p-14 mb-10">
+    <div className="flex justify-between p-14 ">
       <div className="flex justify-start">
         <Button onClick={showMusicPlayer}>
           <IoMusicalNotes className={iconClasses} />
@@ -23,7 +28,7 @@ const OptionBar = () => {
       </div>
       <div className="flex justify-end gap-x-4">
         <ModeButtonGroupContainer />
-        <Button>
+        <Button onClick={showSettingsContent}>
           <IoSettingsSharp className={iconClasses} />
         </Button>
         <FullScreenButtonContainer />

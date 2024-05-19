@@ -10,6 +10,7 @@ import MusicPlayerContainer from "../containers/MusicPlayerContainer";
 import { getBackgroundById } from "../utils/background-utils";
 import PomodoroContainer from "../containers/PomodoroContainer";
 import PomodoroHelper from "../components/PomodoroHelper";
+import SettingsContainer from "../containers/SettingsContainer";
 
 export function Index() {
   const { username, activeBackground } = useAppStore();
@@ -24,6 +25,7 @@ export function Index() {
       <PomodoroContainer />
       <OptionBar />
       <MusicPlayerContainer />
+      <SettingsContainer />
     </div>
   } else {
     view = <div className='flex w-full h-full justify-center items-center'><NameForm /></div>
