@@ -1,10 +1,10 @@
 import { Button } from "flowbite-react";
-import { IoHome, IoBulb } from "react-icons/io5";
+import { HiOutlineHome, HiOutlineLightBulb  } from "react-icons/hi";
 import useAppStore from "../stores/app-store";
 import { Mode } from "../domain/app";
 
 const ModeButtonGroupContainer = () => {
-  const iconClasses = "h-7 w-5";
+  const iconClasses = "h-8 w-6";
   const setActiveMode = useAppStore(state => state.setActiveMode);
 
   const setHomeMode = () => {
@@ -17,11 +17,11 @@ const ModeButtonGroupContainer = () => {
 
   return (
     <Button.Group>
-      <Button onClick={setHomeMode}>
-        <IoHome className={iconClasses} />
+      <Button onClick={setHomeMode} color="outline">
+        <HiOutlineHome className={iconClasses} />
       </Button>
-      <Button onClick={setFocusMode}>
-        <IoBulb className={iconClasses} />
+      <Button onClick={setFocusMode} color="outline">
+        <HiOutlineLightBulb  className={iconClasses} />
       </Button>
     </Button.Group>
   )

@@ -1,6 +1,6 @@
 
 import { Button } from "flowbite-react";
-import { IoSettingsSharp, IoMusicalNotes } from "react-icons/io5";
+import { HiOutlineCog, HiOutlineMusicNote  } from "react-icons/hi";
 import useAppStore from "../stores/app-store";
 import { useCallback } from "react";
 import FullScreenButtonContainer from "./FullScreenButtonContainer";
@@ -17,19 +17,19 @@ const OptionBar = () => {
   }, [setShowSettingsContent]
   )
 
-  const iconClasses = "h-7 w-5"
+  const iconClasses = "h-8 w-6 bg-transparent"
 
   return (
     <div className="flex justify-between p-14 ">
       <div className="flex justify-start">
-        <Button onClick={showMusicPlayer}>
-          <IoMusicalNotes className={iconClasses} />
+        <Button onClick={showMusicPlayer} color="outline">
+          <HiOutlineMusicNote className={iconClasses} />
         </Button>
       </div>
       <div className="flex justify-end gap-x-4">
         <ModeButtonGroupContainer />
-        <Button onClick={showSettingsContent}>
-          <IoSettingsSharp className={iconClasses} />
+        <Button onClick={showSettingsContent} color="outline">
+          <HiOutlineCog className={iconClasses} />
         </Button>
         <FullScreenButtonContainer />
       </div>

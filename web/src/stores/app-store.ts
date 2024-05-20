@@ -74,7 +74,7 @@ const useAppStore = create<IAppStore>()(persist((set, get) => ({
   },
   showSettingsContent: false,
   quoteStore: {
-    quote: "Believe you can and you're halfway there. ",
+    quote: "Believe you can and you're halfway there.",
     author: "Theodore Roosevelt",
   },
   setUsername: (username: string) => set({ username }),

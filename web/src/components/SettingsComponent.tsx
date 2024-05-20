@@ -16,7 +16,7 @@ export interface ISettingsComponentProps {
 const SettingsComponent = ({ show, handleHide }: ISettingsComponentProps) => {
   return (
     <Drawer open={show} onClose={handleHide} position="right">
-      <Drawer.Header title="Drawer" titleIcon={() => <></>} />
+      <Drawer.Header title="Settings" titleIcon={() => <></>} />
       <Drawer.Items>
         <Sidebar>
           <Sidebar.ItemGroup>
