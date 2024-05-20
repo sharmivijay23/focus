@@ -4,7 +4,7 @@ const QuoteContainer = () => {
     const { username, quoteStore } = useAppStore();
 
     return (
-        <div className="flex flex-col justify-end items-end text-white m-14">
+        <div className="flex flex-col justify-end items-end text-white font-semibold m-14">
             <div className=" flex text-2xl max-w-xl">
                 "{quoteStore.quote}"
             </div>

@@ -8,8 +8,8 @@ export interface IFullScreenButtonComponentProps {
 const FullScreenButtonComponent = ({ inFullScreen, onClick }: IFullScreenButtonComponentProps) => {
   const Icon = inFullScreen ? RiFullscreenExitLine : RiFullscreenLine;
   return (
-    <Button onClick={onClick}>
-      <Icon className="h-7 w-5" />
+    <Button onClick={onClick} color="outline">
+      <Icon className="h-8 w-6" />
     </Button>
   )
 }
