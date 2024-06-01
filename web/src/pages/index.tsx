@@ -12,6 +12,7 @@ import PomodoroContainer from "../containers/PomodoroContainer";
 import PomodoroHelper from "../components/PomodoroHelper";
 import SettingsContainer from "../containers/SettingsContainer";
 import { Mode } from "../domain/app";
+import { PlaySoundHelper } from "../components/PlaySoundHelper";
 
 export function Index() {
   const { username, activeMode, activeBackground } = useAppStore();
@@ -25,6 +26,7 @@ export function Index() {
       view = (
         <div className="h-full flex flex-col justify-between filter brightness-100 z-10">
           <PomodoroHelper />
+          <PlaySoundHelper />
           <QuoteContainer />
           <ClockContainer />
           <OptionBar />
@@ -36,6 +38,7 @@ export function Index() {
       view = (
         <div className="h-full flex flex-col justify-between filter brightness-100 z-10">
           <PomodoroHelper />
+          <PlaySoundHelper />
           <div></div>
           <PomodoroContainer />
           <OptionBar />
