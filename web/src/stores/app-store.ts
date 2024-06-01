@@ -2,6 +2,7 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { Mode } from '../domain/app'
 import { Pomodoro, PomodoroMode, TimerMode } from '../domain/pomodoro'
+import { PlayMode } from '../domain/audio'
 
 interface IAppState {
   username: string | undefined,
@@ -11,7 +12,7 @@ interface IAppState {
   focusBackground: string,
   activeBackground: string,
   // Music Player
-  showMusicPlayer: boolean, 
+  showMusicPlayer: boolean,
   // Pomodoro
   taskMinutes: number,
   shortBreakMinutes: number,
@@ -19,6 +20,7 @@ interface IAppState {
   iterationsBeforeLongBreak: number,
   pomodoro?: Pomodoro,
   showSettingsContent: boolean,
+  //Quotes
   weekDayQuotes: {
     day: string,
     stat1: string,
@@ -28,6 +30,13 @@ interface IAppState {
     quote: string,
     author: string,
   },
+  //stat
+  reportFrequency: string | undefined,
+  //sound
+  soundSelected: string,
+  sounds: string[],
+  soundPlaying: boolean,
+  playMode: string,
 }
 
 interface IAppActions {
@@ -43,6 +52,9 @@ interface IAppActions {
   resetPomodoro: () => void
   updatePomodoro: () => void
   setShowSettingsContent: (showSettingsContent: boolean) => void
+  setSoundSelected: (soundSelected: string) => void
+  setPlayMode: (val: string) => void
+  setReportFrequency: (freq: string) => void
 }
 
 interface IAppStore extends IAppState, IAppActions { }
@@ -72,6 +84,13 @@ const useAppStore = create<IAppStore>()(persist((set, get) => ({
     pomodoroMode: PomodoroMode.Task,
     timerMode: TimerMode.Stopped,
   },
+  // Stats
+  reportFrequency: undefined,
+  //Sound
+  soundSelected: 'None',
+  sounds: ['None', 'Rain', 'Cafe Vibes', 'Lightning Wings', 'Night Symphony with Traffic', 'Vintage Train Chime', 'Forest Bonfire'],
+  playMode: PlayMode.Stopped,
+  soundPlaying: false,
   showSettingsContent: false,
   quoteStore: {
     quote: "Believe you can and you're halfway there.",
@@ -89,7 +108,7 @@ const useAppStore = create<IAppStore>()(persist((set, get) => ({
   setLongBreakMinutes: (longBreakMinutes: number) => set({ longBreakMinutes }),
   setIterationsBeforeLongBreak: (iterationsBeforeLongBreak: number) => set({ iterationsBeforeLongBreak }),
   startPomodoro: () => {
-    const { pomodoro, taskMinutes }  = get()
+    const { pomodoro, taskMinutes } = get()
     if (!pomodoro) {
       return
     }
@@ -99,7 +118,7 @@ const useAppStore = create<IAppStore>()(persist((set, get) => ({
       return
     } else if (pomodoro.timerMode === TimerMode.Paused) {
       set({ pomodoro: { ...pomodoro, lastTick: now, timerMode: TimerMode.Running } })
-    } else { 
+    } else {
       set({ pomodoro: { ...pomodoro, lastTick: now, remainingMs: taskMinutes * 60 * 1000, timerMode: TimerMode.Running } })
     }
   },
@@ -117,7 +136,7 @@ const useAppStore = create<IAppStore>()(persist((set, get) => ({
     }
   },
   resetPomodoro: () => {
-    const { pomodoro, taskMinutes }  = get()
+    const { pomodoro, taskMinutes } = get()
     if (!pomodoro) {
       return
     }
@@ -136,7 +155,7 @@ const useAppStore = create<IAppStore>()(persist((set, get) => ({
       let remainingMs = 0
       let iteration = pomodoro.iteration;
       let pomodoroMode = pomodoro.pomodoroMode;
-    
+
       if (pomodoro.pomodoroMode === PomodoroMode.Task) {
         pomodoroMode = PomodoroMode.ShortBreak
         remainingMs = shortBreakMinutes * 60 * 1000
@@ -164,7 +183,12 @@ const useAppStore = create<IAppStore>()(persist((set, get) => ({
     day: "Friday",
     stat1: "Fantastic Friday",
     stat2: "Celebrate your hard work this week. ",
-  }
+  },
+  setReportFrequency: (freq) => set({ reportFrequency: freq }),
+  setSoundSelected: (soundName: string) => set({ soundSelected: soundName }),
+  setPlayMode: (Val) => set({ playMode: Val }),
+
+
 }), persistConfig))
 
 export default useAppStore

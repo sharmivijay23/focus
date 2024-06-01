@@ -1,6 +1,6 @@
 
 import { Button } from "flowbite-react";
-import { HiOutlineCog, HiOutlineMusicNote  } from "react-icons/hi";
+import { HiOutlineCog, HiOutlineMusicNote } from "react-icons/hi";
 import useAppStore from "../stores/app-store";
 import { useCallback } from "react";
 import FullScreenButtonContainer from "./FullScreenButtonContainer";
