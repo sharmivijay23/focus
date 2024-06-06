@@ -1,10 +1,10 @@
 import PomodoroComponent from "../components/PomodoroComponent";
 import { Pomodoro, PomodoroMode, TimerMode } from "../domain/pomodoro";
-import useAppStore from "../stores/app-store";
+import usePomodoroStore from "../stores/pomodoro-store";
 
 const PomodoroContainer = () => {
-  const { startPomodoro, pausePomodoro, resetPomodoro, pomodoro, taskMinutes } = useAppStore();
-  
+  const { startPomodoro, pausePomodoro, resetPomodoro, pomodoro, taskMinutes } = usePomodoroStore();
+
   if (!pomodoro) {
     return 'Pomodoro Crashed';
   }

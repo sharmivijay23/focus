@@ -18,6 +18,7 @@ export function Index() {
   const { username, activeMode, activeBackground } = useAppStore();
   const bgUrl = getBackgroundById(activeBackground);
 
+
   let view = null;
   if (!username) {
     view = <div className='flex w-full h-full justify-center items-center'><NameForm /></div>;

@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react"
 import { PlayMode } from "../domain/audio"
-import useAppStore from "../stores/app-store"
 import { getSoundURL } from '../utils/sound-utils'
+import { useAudioStore } from "../stores/audio-store"
 
 export const PlaySoundHelper = () => {
 
-  const { playMode, soundSelected } = useAppStore()
+  const { playMode, soundSelected } = useAudioStore()
   const audioRef = useRef<HTMLAudioElement>();
 
   useEffect(() => {

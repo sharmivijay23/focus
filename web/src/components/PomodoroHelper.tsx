@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
-import useAppStore from "../stores/app-store";
 import { TimerMode } from "../domain/pomodoro";
+import usePomodoroStore from "../stores/pomodoro-store";
 
 const PomodoroHelper = () => {
-  const { pomodoro, updatePomodoro } = useAppStore();
+  const { pomodoro, updatePomodoro } = usePomodoroStore();
   const intervalRef = useRef<NodeJS.Timer | undefined>();
   useEffect(() => {
     if (pomodoro?.timerMode === TimerMode.Running) {
