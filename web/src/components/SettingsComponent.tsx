@@ -10,15 +10,15 @@ import { HiChatAlt2 } from "react-icons/hi";
 import { IconType } from "react-icons";
 import { useState } from "react";
 import { HiOutlineHome, HiOutlineLightBulb } from "react-icons/hi";
-import HomeThemeComponent from "./HomeThemeContainer";
+import HomeThemeContainer from "../containers/HomeThemeContainer"
 import SoundContainer from "../containers/SoundContainer";
 import MusicContainer from "../containers/MusicContainer";
 import TimerContainer from "../containers/TimerContainer";
-import ClockTimeComponent from "./ClockComponent";
+import ClockTimeComponent from "./ClockTimeComponent";
 import StatsContainer from "../containers/StatsContainer";
 import ProfileContainer from "../containers/ProfileContainer";
 import ContactComponent from "./ContactsComponent";
-import FocusThemeComponent from "./FocusThemeContainer";
+import FocusThemeContainer from "../containers/FocusThemeContainer";
 
 export interface ISettingsComponentProps {
   show: boolean;
@@ -49,9 +49,9 @@ const SettingsComponent = ({ show, handleHide }: ISettingsComponentProps) => {
   const currentSettingsMenu = (itemSelected: string) => {
     switch (itemSelected) {
       case "Home Theme":
-        return <HomeThemeComponent />
+        return <HomeThemeContainer />
       case "Focus Theme":
-        return <FocusThemeComponent />
+        return <FocusThemeContainer />
       case "Sounds":
         return <SoundContainer />
       case "Music":
@@ -67,7 +67,7 @@ const SettingsComponent = ({ show, handleHide }: ISettingsComponentProps) => {
       case "ContactUs":
         return <ContactComponent />
       default:
-        return <HomeThemeComponent />
+        return <HomeThemeContainer />
     }
   }
   return (

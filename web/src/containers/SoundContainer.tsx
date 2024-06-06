@@ -1,11 +1,11 @@
 "use client";
-import useAppStore from "../stores/app-store";
 import { PlayMode } from "../domain/audio";
 import { SoundComponent } from "../components/SoundComponent";
+import { useAudioStore } from "../stores/audio-store";
 
 const SoundContainer = () => {
 
-  const { setSoundSelected, sounds, playMode, setPlayMode } = useAppStore();
+  const { setSoundSelected, sounds, playMode, setPlayMode } = useAudioStore();
 
   const handlePlayMode = () => {
     // if (soundSelected != 'None') {
