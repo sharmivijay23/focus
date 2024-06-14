@@ -3,7 +3,6 @@ import useAppStore from "../stores/app-store";
 const ClockTimeComponent = () => {
 
   const { setTimeFormat, timeFormat } = useAppStore()
-  console.log(timeFormat)
 
   const clock_class = "flex h-28 w-48 rounded-lg justify-center items-center text-4xl font-bold text-white p-10 bg-gradient-to-r from-green-500 via-yellow-700 to-green-800 cursor-pointer"
   const selected_clock_class = "flex h-28 w-48 rounded-lg justify-center items-center text-4xl font-bold text-white p-10 bg-gradient-to-r from-green-500 via-yellow-700 to-green-800 cursor-pointer outline outline-white outline-4"

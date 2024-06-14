@@ -18,8 +18,8 @@ const SoundContainer = () => {
   }
 
   const handleSoundSelection = (sound: string) => {
+    setPlayMode(PlayMode.Stopped)
     setSoundSelected(sound)
-    handlePlayMode()
   }
 
   const playOrPauseText = playMode === PlayMode.Stopped ? 'Play' : 'Pause'

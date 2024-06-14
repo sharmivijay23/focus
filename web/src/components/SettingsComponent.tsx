@@ -19,6 +19,7 @@ import StatsContainer from "../containers/StatsContainer";
 import ProfileContainer from "../containers/ProfileContainer";
 import ContactComponent from "./ContactsComponent";
 import FocusThemeContainer from "../containers/FocusThemeContainer";
+import { enableComponents } from "../utils/config-utils"
 
 export interface ISettingsComponentProps {
   show: boolean;
@@ -30,8 +31,8 @@ const SettingsComponent = ({ show, handleHide }: ISettingsComponentProps) => {
 
   const [itemSelected, setItemSelected] = useState("HomeThemeContainer");
 
-  const classes = " hover:bg-accent text-white"
-  const active_classes = " bg-accent text-white hover:bg-accent"
+  const classes = " hover:bg-accent text-white mb-1"
+  const active_classes = " bg-accent text-white hover:bg-accent mb-1"
 
   const decorateIcon = (Icon: IconType) => {
     const ThemeIcon = (props: any) => {
@@ -79,66 +80,66 @@ const SettingsComponent = ({ show, handleHide }: ISettingsComponentProps) => {
             <Sidebar >
               <Sidebar.ItemGroup>
                 <Sidebar.Items>
-                  <Sidebar.Item
+                  {enableComponents("Theme") && <Sidebar.Item
                     icon={decorateIcon(HiPhotograph)}
                     className={itemSelected === "Theme" ? active_classes : classes}
                     onClick={() => setItemSelected("Home Theme")}>
                     Theme
-                  </Sidebar.Item>
+                  </Sidebar.Item>}
                   <ul>
-                    <li className="text-white hover:bg-accent rounded-lg p-2 ml-6 flex flex-row text-center"
+                    {enableComponents("Home Theme") && <li className={`text-white hover:bg-accent rounded-lg p-2 ml-6 mb-1 flex flex-row text-center ${itemSelected === "Home Theme" ? "bg-accent" : " "}`}
                       onClick={() => setItemSelected("Home Theme")}>
                       <HiOutlineHome className="text-white mt-1 mr-2" />
                       Home Theme
-                    </li>
-                    <li className="text-white hover:bg-accent rounded-lg p-2 ml-6 flex flex-row text-center"
+                    </li>}
+                    {enableComponents("Focus Theme") && <li className={`text-white hover:bg-accent rounded-lg p-2 ml-6 mb-1 flex flex-row text-center ${itemSelected === "Focus Theme" ? "bg-accent" : " "}`}
                       onClick={() => setItemSelected("Focus Theme")}>
                       <HiOutlineLightBulb className="text-white mt-1 mr-2" />
                       Focus Theme
-                    </li>
+                    </li>}
                   </ul>
-                  <Sidebar.Item
+                  {enableComponents("Sounds") && <Sidebar.Item
                     icon={decorateIcon(BsSoundwave)}
-                    className={`text-white hover:bg-accent ${itemSelected === "Sounds" ? "bg-accent" : ""}`}
+                    className={`text-white hover:bg-accent mb-1 ${itemSelected === "Sounds" ? "bg-accent" : ""}`}
                     onClick={() => setItemSelected("Sounds")}>
                     Sounds
-                  </Sidebar.Item>
-                  <Sidebar.Item
+                  </Sidebar.Item>}
+                  {enableComponents("Timer") && <Sidebar.Item
                     icon={decorateIcon(MdTimer)}
                     className={itemSelected === "Timer" ? active_classes : classes}
                     onClick={() => setItemSelected("Timer")}>
                     Timer
-                  </Sidebar.Item>
-                  <Sidebar.Item
+                  </Sidebar.Item>}
+                  {enableComponents("Clock") && <Sidebar.Item
                     icon={decorateIcon(HiClock)}
                     className={itemSelected === "Clock" ? active_classes : classes}
                     onClick={() => setItemSelected("Clock")}>
                     Clock
-                  </Sidebar.Item>
-                  <Sidebar.Item
+                  </Sidebar.Item>}
+                  {enableComponents("Stats") && <Sidebar.Item
                     icon={decorateIcon(HiChartSquareBar)}
                     className={itemSelected === "Stats" ? active_classes : classes}
                     onClick={() => setItemSelected("Stats")}>
                     Stats
-                  </Sidebar.Item>
-                  <Sidebar.Item
+                  </Sidebar.Item>}
+                  {enableComponents("Music") && <Sidebar.Item
                     icon={decorateIcon(HiMusicalNote)}
                     className={itemSelected === "Music" ? active_classes : classes}
                     onClick={() => setItemSelected("Music")}>
                     Music
-                  </Sidebar.Item>
-                  <Sidebar.Item
+                  </Sidebar.Item>}
+                  {enableComponents("Profile") && <Sidebar.Item
                     icon={decorateIcon(HiUserCircle)}
                     className={itemSelected === "Profile" ? active_classes : classes}
                     onClick={() => setItemSelected("Profile")}>
                     Account Settings
-                  </Sidebar.Item>
-                  <Sidebar.Item
+                  </Sidebar.Item>}
+                  {enableComponents("Contact Us") && <Sidebar.Item
                     icon={decorateIcon(HiChatAlt2)}
                     className={itemSelected === "ContactUs" ? active_classes : classes}
                     onClick={() => setItemSelected("ContactUs")}>
                     Contact Us
-                  </Sidebar.Item>
+                  </Sidebar.Item>}
                 </Sidebar.Items>
               </Sidebar.ItemGroup>
             </Sidebar>
