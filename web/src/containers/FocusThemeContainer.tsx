@@ -4,7 +4,7 @@ import FocusThemeComponent from "../components/FocusThemeComponent";
 
 const FocusThemeContainer = () => {
 
-  const { setFocusBackground, setActiveMode, focusBackground } = useAppStore()
+  const { setFocusBackground, setActiveMode, focusBackground, images } = useAppStore()
 
   const handleImageClick = (image: string) => {
     setFocusBackground(image)
@@ -12,7 +12,7 @@ const FocusThemeContainer = () => {
   }
 
   return (
-    <FocusThemeComponent handleImageClick={handleImageClick} focusBackground={focusBackground} />
+    <FocusThemeComponent handleImageClick={handleImageClick} focusBackground={focusBackground} images={images} />
   )
 }
 

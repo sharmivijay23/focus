@@ -6,6 +6,7 @@ import { TimeFormat } from '../domain/clock'
 interface IAppState {
   username: string | undefined,
   activeMode: Mode,
+  images: string[],
   // Background
   homeBackground: string,
   focusBackground: string,
@@ -48,6 +49,7 @@ const persistConfig = {
 const useAppStore = create<IAppStore>()(persist((set, get) => ({
   username: undefined,
   activeMode: Mode.Home,
+  images: ["temple", "tajmahal", "himalayas_with_houses", "tajmahal_dark"],
   // Background
   homeBackground: 'temple',
   focusBackground: 'himalayas_with_houses',
@@ -57,7 +59,7 @@ const useAppStore = create<IAppStore>()(persist((set, get) => ({
   // Stats
   reportFrequency: undefined,
   //Clock
-  timeFormat: TimeFormat.militaryTimeFormat,
+  timeFormat: TimeFormat.MilitaryTimeFormat,
   showSettingsContent: false,
   quoteStore: {
     quote: "Believe you can and you're halfway there.",

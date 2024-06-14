@@ -11,19 +11,18 @@ export const PlaySoundHelper = () => {
   useEffect(() => {
     if (playMode === PlayMode.Playing) {
       const soundURL = getSoundURL(soundSelected)
-      const sound = new Audio(soundURL);
-
       if (audioRef.current) {
         audioRef.current.pause();
+        audioRef.current.src = soundURL
+        audioRef.current.load()
+        audioRef.current.play()
         // audioRef.current.currentTime = 0;
       }
-      if (soundSelected != undefined || soundSelected != 'None') {
-        audioRef.current = sound;
-        sound.play();
-      }
       else {
-        if (audioRef.current) {
-          audioRef.current.pause()
+        if (soundSelected != undefined || soundSelected != 'None') {
+          const sound = new Audio(soundURL);
+          audioRef.current = sound;
+          sound.play();
         }
       }
       return () => {
@@ -32,7 +31,18 @@ export const PlaySoundHelper = () => {
         }
       }
     }
-  }, [playMode, soundSelected])
+    else {
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+
+      return () => {
+        if (audioRef.current) {
+          audioRef.current.pause();
+        }
+      }
+    }
+  }, [playMode])
 
 
   return null

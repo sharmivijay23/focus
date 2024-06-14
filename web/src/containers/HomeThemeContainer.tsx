@@ -4,7 +4,7 @@ import HomeThemeComponent from "../components/HomeThemeComponent";
 
 const FocusThemeContainer = () => {
 
-  const { setHomeBackground, setActiveMode, homeBackground } = useAppStore()
+  const { setHomeBackground, setActiveMode, homeBackground, images } = useAppStore()
 
   const handleImageClick = (image: string) => {
     setHomeBackground(image)
@@ -12,7 +12,7 @@ const FocusThemeContainer = () => {
   }
 
   return (
-    <HomeThemeComponent handleImageClick={handleImageClick} homeBackground={homeBackground} />
+    <HomeThemeComponent handleImageClick={handleImageClick} homeBackground={homeBackground} images={images} />
   )
 }
 

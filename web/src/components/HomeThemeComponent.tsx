@@ -4,12 +4,10 @@ import { getBackgroundById } from "../utils/background-utils"
 interface IHomeThemeComponentProps {
   handleImageClick: (image: string) => void,
   homeBackground: string,
+  images: string[],
 }
 
-const HomeThemeComponent = ({ handleImageClick, homeBackground }: IHomeThemeComponentProps) => {
-
-
-  const images = ["temple", "tajmahal", "himalayas_with_houses", "tajmahal_dark"]
+const HomeThemeComponent = ({ handleImageClick, homeBackground, images }: IHomeThemeComponentProps) => {
 
   const displayImages = images.map((image, index) => {
     return (

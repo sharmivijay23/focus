@@ -1,14 +1,14 @@
 import Image from "next/image"
 import { getBackgroundById } from "../utils/background-utils"
+import useAppStore from "../stores/app-store"
 
 interface IFocusThemeComponentProps {
   handleImageClick: (image: string) => void,
-  focusBackground: string
+  focusBackground: string,
+  images: string[],
 }
 
-const FocusThemeComponent = ({ handleImageClick, focusBackground }: IFocusThemeComponentProps) => {
-
-  const images = ["temple", "tajmahal", "himalayas_with_houses", "tajmahal_dark"]
+const FocusThemeComponent = ({ handleImageClick, focusBackground, images }: IFocusThemeComponentProps) => {
 
   const displayImages = images.map((image) => {
     return (
