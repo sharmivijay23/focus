@@ -1,5 +1,5 @@
 import { Button } from "flowbite-react";
-import { RiFullscreenExitLine , RiFullscreenLine  } from "react-icons/ri";
+import { RiFullscreenExitLine, RiFullscreenLine } from "react-icons/ri";
 export interface IFullScreenButtonComponentProps {
   inFullScreen: boolean;
   onClick: () => void;

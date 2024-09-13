@@ -13,8 +13,20 @@ const customTheme: CustomFlowbiteTheme = {
       transparent: "bg-transparent text-white hover:text-white/90",
       outline: "bg-black/30 hover:bg-accent text-white",
     },
+    size: {
+      medium: "px-3 py-1.5 text-md",
+      large: "px-3 py-1.5 text-lg"
+    },
   },
-};
+  sidebar: {
+    root: {
+      inner: "bg-background"
+    },
+  },
+  dropdown: {
+
+  },
+}
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
