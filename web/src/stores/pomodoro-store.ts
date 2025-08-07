@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { Pomodoro, PomodoroMode, TimerMode } from '../domain/pomodoro'
+import { FocusStat, Pomodoro, PomodoroMode, TimerMode } from '../domain/pomodoro'
+import moment from 'moment'
 
 
 interface IPomodoroState {
@@ -10,6 +11,7 @@ interface IPomodoroState {
   longBreakMinutes: number,
   iterationsBeforeLongBreak: number,
   pomodoro?: Pomodoro,
+  focusStat: FocusStat
 }
 
 interface IPomodoroActions {
@@ -21,6 +23,8 @@ interface IPomodoroActions {
   pausePomodoro: () => void
   resetPomodoro: () => void
   updatePomodoro: () => void
+  setFocusTime: () => void
+  resetFocusTime: () => void
 }
 
 interface IPomodoroStore extends IPomodoroState, IPomodoroActions { }
@@ -31,9 +35,9 @@ const persistConfig = {
 
 export const usePomodoroStore = create<IPomodoroStore>()(persist((set, get) => ({
   // Pomodoro
-  taskMinutes: 25,
-  shortBreakMinutes: 5,
-  longBreakMinutes: 15,
+  taskMinutes: 1,
+  shortBreakMinutes: 1,
+  longBreakMinutes: 1,
   iterationsBeforeLongBreak: 4,
   pomodoro: {
     iteration: 1,
@@ -41,6 +45,21 @@ export const usePomodoroStore = create<IPomodoroStore>()(persist((set, get) => (
     lastTick: undefined,
     pomodoroMode: PomodoroMode.Task,
     timerMode: TimerMode.Stopped,
+  },
+  focusStat: {
+    focusTime: 0,
+    focusDate: moment().format('YYYY-MM-DD'),
+  },
+
+  setFocusTime: () => {
+    const focusStat = get().focusStat
+    const currentDate = moment().format('YYYY-MM-DD')
+    const time = focusStat.focusTime + 100
+    set({ focusStat: { ...focusStat, focusDate: currentDate, focusTime: time } })
+  },
+  resetFocusTime: () => {
+    const focusStat = get().focusStat
+    set({ focusStat: { ...focusStat, focusDate: moment().format('YYYY-MM-DD'), focusTime: 0 } })
   },
   setTaskMinutes: (taskMinutes: number) => set({ taskMinutes }),
   setShortBreakMinutes: (shortBreakMinutes: number) => set({ shortBreakMinutes }),

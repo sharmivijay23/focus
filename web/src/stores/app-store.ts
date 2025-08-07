@@ -14,6 +14,7 @@ interface IAppState {
   // Music Player
   showMusicPlayer: boolean,
   showSettingsContent: boolean,
+
   //Quotes
   weekDayQuotes: {
     day: string,
@@ -38,6 +39,7 @@ interface IAppActions {
   setFocusBackground: (image: string) => void
   setHomeBackground: (image: string) => void
   setTimeFormat: (TimeFormat: string) => void
+
 }
 
 interface IAppStore extends IAppState, IAppActions { }
@@ -56,6 +58,7 @@ const useAppStore = create<IAppStore>()(persist((set, get) => ({
   activeBackground: 'temple',
   // Music Player
   showMusicPlayer: false,
+
   // Stats
   reportFrequency: undefined,
   //Clock

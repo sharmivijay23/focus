@@ -1,11 +1,21 @@
+import MusicComponent from "../components/MusicComponent"
+import { MusicMode } from "../domain/audio"
+import useAppStore from "../stores/app-store"
+import { useMusicStore } from "../stores/music-store"
 
 const MusicContainer = () => {
 
+  const { setShowMusicPlayer } = useAppStore()
+  const { musicList, setMusicMode, setMusicPlaylist, playlist } = useMusicStore()
+
+  const handleMusicPlaylist = (music: string) => {
+    setMusicPlaylist(music)
+    setMusicMode(MusicMode.Playing)
+    setShowMusicPlayer(true)
+  }
+
   return (
-    <div className="flex flex-col ml-6">
-      <div className="text-4xl mb-4 font-semibold"> Music </div>
-      <div className="text-gray-400"> Access and organize your music collection.Create playlists and enjoy your favorite tracks.</div>
-    </div>
+    <MusicComponent musicList={musicList} handleMusicPlaylist={handleMusicPlaylist} playlist={playlist} />
   )
 }
 

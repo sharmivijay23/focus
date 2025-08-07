@@ -5,6 +5,8 @@ import usePomodoroStore from "../stores/pomodoro-store";
 const PomodoroContainer = () => {
   const { startPomodoro, pausePomodoro, resetPomodoro, pomodoro, taskMinutes } = usePomodoroStore();
 
+  // console.log(pomodoro, "Pomodoro")
+
   if (!pomodoro) {
     return 'Pomodoro Crashed';
   }
