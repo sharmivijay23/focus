@@ -23,7 +23,7 @@ const MusicPlayerComponent = ({ show, handleHide, playlist }: IMusicPlayerCompon
           allow="encrypted-media"  // Required for embedding Spotify playlists
           loading="lazy"
           onError={(event) => {
-            console.error("Error loading iframe:", event.target.src);
+            console.error("Error loading iframe:", (event as any)?.target?.src);
           }}
         >
         </iframe>

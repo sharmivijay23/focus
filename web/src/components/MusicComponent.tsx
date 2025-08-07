@@ -17,7 +17,7 @@ const MusicComponent = ({ musicList, handleMusicPlaylist, playlist }: IMusicComp
           height={125}
           alt={music}
           className={` rounded-lg cursor-pointer  ${playlist === music ? 'outline outline-white outline-4' : ''}`}
-          onError={(e) => console.error("Error loading image", e.target.src)}
+          onError={(e) => console.error("Error loading image", (e as any)?.target?.src)}
           onClick={() => handleMusicPlaylist(music)}
         />
         <div className=" text-center capitalize mt-2 w-32">{music}</div>

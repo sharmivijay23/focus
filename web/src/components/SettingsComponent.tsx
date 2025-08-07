@@ -24,7 +24,6 @@ import { enableComponents } from "../utils/config-utils"
 export interface ISettingsComponentProps {
   show: boolean;
   handleHide: () => void;
-  itemSelected: string;
 }
 
 const SettingsComponent = ({ show, handleHide }: ISettingsComponentProps) => {
