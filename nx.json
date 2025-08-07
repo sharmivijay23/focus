@@ -6,7 +6,7 @@
       "plugin": "@nx/next/plugin",
       "options": {
         "startTargetName": "start",
-        "buildTargetName": "build",
+        "buildTargetName": "build --output public",
         "devTargetName": "dev",
         "serveStaticTargetName": "serve-static"
       }
