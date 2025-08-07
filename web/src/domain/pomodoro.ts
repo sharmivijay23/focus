@@ -17,3 +17,8 @@ export interface Pomodoro {
   pomodoroMode: PomodoroMode,
   timerMode: TimerMode,
 }
+
+export interface FocusStat {
+  focusTime: number,
+  focusDate: string,
+}

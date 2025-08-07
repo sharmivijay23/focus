@@ -1,7 +1,7 @@
 import { Dropdown, DropdownItem, TextInput, Label } from "flowbite-react"
 import { useState } from "react"
 import { Hourglass } from "react-loader-spinner"
-// import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+import { CountdownTimer } from "../components/CountdownTimer"
 
 const TimerContainer = () => {
   const [timer, setTimer] = useState(" ")
@@ -14,44 +14,42 @@ const TimerContainer = () => {
     return resultedclass
   }
 
-  const hourglass = () => {
-    return timer === "Sand Timer" ? <SmallSandTimer /> : ""
-  }
+  // const hourglass = () => {
+  //   return timer === "Sand Timer" ? <SmallSandTimer /> : ""
+  // }
 
-  const SmallSandTimer = () => {
-    return (
-      <Hourglass
-        visible={true}
-        height="20"
-        width="20"
-        ariaLabel="hourglass-loading"
-        wrapperStyle={{}}
-        wrapperClass=""
-        colors={['green', '#72a1ed']}
-      />
-    )
-  }
+  // const SmallSandTimer = () => {
+  //   return (
+  //     <Hourglass
+  //       visible={true}
+  //       height="20"
+  //       width="20"
+  //       ariaLabel="hourglass-loading"
+  //       wrapperStyle={{}}
+  //       wrapperClass=""
+  //       colors={['green', '#72a1ed']}
+  //     />
+  //   )
+  // }
 
-  const SandTimer = () => {
-    return (
-      <Hourglass
-        visible={true}
-        height="80"
-        width="80"
-        ariaLabel="hourglass-loading"
-        wrapperStyle={{}}
-        wrapperClass=""
-        colors={['#306cce', '#72a1ed']}
-      />
-    )
-  }
+  // const SandTimer = () => {
+  //   return (
+  //     <Hourglass
+  //       visible={true}
+  //       height="80"
+  //       width="80"
+  //       ariaLabel="hourglass-loading"
+  //       wrapperStyle={{}}
+  //       wrapperClass=""
+  //       colors={['#306cce', '#72a1ed']}
+  //     />
+  //   )
+  // }
 
   const viewTimer = (timer: string) => {
     switch (timer) {
-      case "Sand Timer":
-        return <SandTimer />
       case "Countdown Timer":
-        return <div> Countdown timer</div>
+        return <CountdownTimer />
       default:
         return <div> Nothing found</div>
     }
@@ -66,25 +64,16 @@ const TimerContainer = () => {
         ensuring you stay organized and focused on your deadlines
       </div>
       <div className="flex flex-row items-center ">
-        <Dropdown label={timer === " " ? "Select Timer" : timer} className="ml-16 bg-background text-md font-semibold">
-          <DropdownItem className={timerClass("Sand Timer")} onClick={() => setTimer("Sand Timer")}>Sand Timer</DropdownItem>
+        <Dropdown size='lg' label={timer === " " ? "Select Timer" : timer} className="ml-16 bg-background text-xl font-semibold">
+          {/* <DropdownItem className={timerClass("Sand Timer")} onClick={() => setTimer("Sand Timer")}>Sand Timer</DropdownItem> */}
           <DropdownItem className={timerClass("Countdown Timer")} onClick={() => setTimer("Countdown Timer")}>Countdown Timer</DropdownItem>
           <DropdownItem className={timerClass("Productivity Timer")} onClick={() => setTimer("Productivity Timer")}>Productivity Timer / Pomodoro</DropdownItem>
-          <DropdownItem className={timerClass("Candle Clocks")} onClick={() => setTimer("Candle Clocks")}>Candle Clocks / Incense Clocks</DropdownItem>
+          {/* <DropdownItem className={timerClass("Candle Clocks")} onClick={() => setTimer("Candle Clocks")}>Candle Clocks / Incense Clocks</DropdownItem> */}
         </Dropdown>
-        <div className="ml-6">
-          {hourglass()}
-        </div>
       </div>
-      <div className="mt-8 font-md"> Task and Break time settings</div>
-      <div className="mt-10 flex flex-col">
-
-        <Label htmlFor="inputTime" value="Enter Time" className="text-white" />
-        <TextInput id="inputTime" type="number" sizing="sm" className="w-1/4" />
-      </div>
-      {/* <div>
+      <div>
         {timer === " " ? "" : viewTimer(timer)}
-      </div> */}
+      </div>
     </div >
   )
 }

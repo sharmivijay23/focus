@@ -12,3 +12,4 @@ export const getBackgroundById = (id: string): string => {
       return '/assets/backgrounds/in/temple.png'
   }
 }
+

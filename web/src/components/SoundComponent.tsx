@@ -16,10 +16,8 @@ export const SoundComponent = ({ sounds, text, handlePlayMode, handleSoundSelect
         <Label htmlFor={sound} className="text-white"> {sound} </Label>
       </div>
     )
-  }
-  )
-
-
+  })
+  
   return (
     <div className="flex flex-col ml-6">
       <div className="text-4xl mb-4 font-semibold"> Sounds </div>
