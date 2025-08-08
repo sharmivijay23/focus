@@ -5,7 +5,7 @@ import { PomodoroMode } from "../domain/pomodoro";
 
 const PomodoroHelper = () => {
   const { pomodoro, updatePomodoro, focusStat, setFocusTime, resetFocusTime } = usePomodoroStore();
-  const intervalRef = useRef<NodeJS.Timer | undefined>();
+  const intervalRef = useRef<NodeJS.Timer | null>(null);
   console.log(focusStat, "Focus time outside useEffect")
   useEffect(() => {
     if (pomodoro?.timerMode === TimerMode.Running) {
@@ -24,13 +24,13 @@ const PomodoroHelper = () => {
     else {
       if (intervalRef.current) {
         clearInterval(intervalRef.current)
-        intervalRef.current = undefined
+        intervalRef.current = null
       }
     }
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current)
-        intervalRef.current = undefined
+        intervalRef.current = null
       }
     }
   }, [pomodoro?.timerMode, updatePomodoro, pomodoro?.pomodoroMode])

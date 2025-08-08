@@ -3,10 +3,15 @@ import Head from 'next/head';
 import './styles.css';
 import 'flowbite';
 import { appWithTranslation } from 'next-i18next'
-import { Flowbite } from 'flowbite-react';
-import type { CustomFlowbiteTheme } from "flowbite-react";
+// import Flowbite from 'flowbite-react';
+import 'flowbite';
 
-const customTheme: CustomFlowbiteTheme = {
+
+import * as FlowbiteReact from 'flowbite-react';
+
+
+
+const customTheme = {
   button: {
     color: {
       primary: "bg-accent hover:brightness-90 text-white",
@@ -31,12 +36,12 @@ const customTheme: CustomFlowbiteTheme = {
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Flowbite theme={{ theme: customTheme }}>
+      {/* <Flowbite theme={{ theme: customTheme }}> */}
         <Head>
           <title>Welcome to web!</title>
         </Head>
         <Component {...pageProps} />
-      </Flowbite>
+      {/* </Flowbite> */}
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { Drawer, Sidebar } from "flowbite-react";
+import { Drawer, Sidebar, DrawerHeader,DrawerItems,SidebarItem,  SidebarItems, SidebarItemGroup } from "flowbite-react";
 import { HiPhotograph } from "react-icons/hi";
 import { HiMusicalNote } from "react-icons/hi2";
 import { BsSoundwave } from "react-icons/bs";
@@ -72,19 +72,19 @@ const SettingsComponent = ({ show, handleHide }: ISettingsComponentProps) => {
   }
   return (
     <Drawer open={show} onClose={handleHide} position="right" className="w-3/5 bg-background">
-      < Drawer.Header title="Settings" titleIcon={() => <></>} className="bg-background" />
+      < DrawerHeader title="Settings" titleIcon={() => <></>} className="bg-background" />
       <div className="flex flex-row ">
         <div>
-          <Drawer.Items >
+          <DrawerItems >
             <Sidebar >
-              <Sidebar.ItemGroup>
-                <Sidebar.Items>
-                  {enableComponents("Theme") && <Sidebar.Item
+              <SidebarItemGroup>
+                <SidebarItems>
+                  {enableComponents("Theme") && <SidebarItem
                     icon={decorateIcon(HiPhotograph)}
                     className={itemSelected === "Theme" ? active_classes : classes}
                     onClick={() => setItemSelected("Home Theme")}>
                     Theme
-                  </Sidebar.Item>}
+                  </SidebarItem>}
                   <ul>
                     {enableComponents("Home Theme") && <li className={`text-white hover:bg-accent rounded-lg p-2 ml-6 mb-1 flex flex-row text-center ${itemSelected === "Home Theme" ? "bg-accent" : " "}`}
                       onClick={() => setItemSelected("Home Theme")}>
@@ -97,52 +97,52 @@ const SettingsComponent = ({ show, handleHide }: ISettingsComponentProps) => {
                       Focus Theme
                     </li>}
                   </ul>
-                  {enableComponents("Sounds") && <Sidebar.Item
+                  {enableComponents("Sounds") && <SidebarItem
                     icon={decorateIcon(BsSoundwave)}
                     className={`text-white hover:bg-accent mb-1 ${itemSelected === "Sounds" ? "bg-accent" : ""}`}
                     onClick={() => setItemSelected("Sounds")}>
                     Sounds
-                  </Sidebar.Item>}
-                  {enableComponents("Timer") && <Sidebar.Item
+                  </SidebarItem>}
+                  {enableComponents("Timer") && <SidebarItem
                     icon={decorateIcon(MdTimer)}
                     className={itemSelected === "Timer" ? active_classes : classes}
                     onClick={() => setItemSelected("Timer")}>
                     Timer
-                  </Sidebar.Item>}
-                  {enableComponents("Clock") && <Sidebar.Item
+                  </SidebarItem>}
+                  {enableComponents("Clock") && <SidebarItem
                     icon={decorateIcon(HiClock)}
                     className={itemSelected === "Clock" ? active_classes : classes}
                     onClick={() => setItemSelected("Clock")}>
                     Clock
-                  </Sidebar.Item>}
-                  {enableComponents("Stats") && <Sidebar.Item
+                  </SidebarItem>}
+                  {enableComponents("Stats") && <SidebarItem
                     icon={decorateIcon(HiChartSquareBar)}
                     className={itemSelected === "Stats" ? active_classes : classes}
                     onClick={() => setItemSelected("Stats")}>
                     Stats
-                  </Sidebar.Item>}
-                  {enableComponents("Music") && <Sidebar.Item
+                  </SidebarItem>}
+                  {enableComponents("Music") && <SidebarItem
                     icon={decorateIcon(HiMusicalNote)}
                     className={itemSelected === "Music" ? active_classes : classes}
                     onClick={() => setItemSelected("Music")}>
                     Music
-                  </Sidebar.Item>}
-                  {enableComponents("Profile") && <Sidebar.Item
+                  </SidebarItem>}
+                  {enableComponents("Profile") && <SidebarItem
                     icon={decorateIcon(HiUserCircle)}
                     className={itemSelected === "Profile" ? active_classes : classes}
                     onClick={() => setItemSelected("Profile")}>
                     Account Settings
-                  </Sidebar.Item>}
-                  {enableComponents("Contact Us") && <Sidebar.Item
+                  </SidebarItem>}
+                  {enableComponents("Contact Us") && <SidebarItem
                     icon={decorateIcon(HiChatAlt2)}
                     className={itemSelected === "ContactUs" ? active_classes : classes}
                     onClick={() => setItemSelected("ContactUs")}>
                     Contact Us
-                  </Sidebar.Item>}
-                </Sidebar.Items>
-              </Sidebar.ItemGroup>
+                  </SidebarItem>}
+                </SidebarItems>
+              </SidebarItemGroup>
             </Sidebar>
-          </Drawer.Items>
+          </DrawerItems>
         </div>
         <div className="text-white">
           {currentSettingsMenu(itemSelected)}

@@ -1,6 +1,6 @@
 import { Dropdown, DropdownItem, TextInput, Label } from "flowbite-react"
 import { useState } from "react"
-import { Hourglass } from "react-loader-spinner"
+
 import { CountdownTimer } from "../components/CountdownTimer"
 
 const TimerContainer = () => {

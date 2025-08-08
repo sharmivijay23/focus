@@ -1,0 +1,445 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.3.11",
+  "pathMappings": {},
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/next/plugin"
+    }
+  ],
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": false
+    }
+  },
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "17866138117546000433"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "18231266741953795743"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13675722232561398191"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "16448050467312557263"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "4422400126597322578"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "12090865539800809320"
+      },
+      {
+        "file": "README.md",
+        "hash": "11399167651843982878"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3494843969422251966"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": "nx.json",
+        "hash": "16923815289826188569"
+      },
+      {
+        "file": "package.json",
+        "hash": "9654995579644321738"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "16936441711144470533"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "4395913171160286393"
+      }
+    ],
+    "projectFileMap": {
+      "web": [
+        {
+          "file": "web/.eslintrc.json",
+          "hash": "7850792711465479162"
+        },
+        {
+          "file": "web/index.d.ts",
+          "hash": "5498222895072842432"
+        },
+        {
+          "file": "web/jest.config.ts",
+          "hash": "15659468381831314572"
+        },
+        {
+          "file": "web/next-env.d.ts",
+          "hash": "9827906575449055322"
+        },
+        {
+          "file": "web/next-i18next.config.js",
+          "hash": "6471147638086416998"
+        },
+        {
+          "file": "web/next.config.js",
+          "hash": "8563438213387316235"
+        },
+        {
+          "file": "web/postcss.config.js",
+          "hash": "2215420153158586088"
+        },
+        {
+          "file": "web/project.json",
+          "hash": "13534751206857163935"
+        },
+        {
+          "file": "web/public/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "web/public/assets/backgrounds/in/himalayas.png",
+          "hash": "12430295036243381139"
+        },
+        {
+          "file": "web/public/assets/backgrounds/in/himalayas_with_houses.png",
+          "hash": "4696620773668680658"
+        },
+        {
+          "file": "web/public/assets/backgrounds/in/tajmahal.png",
+          "hash": "16278284869859894415"
+        },
+        {
+          "file": "web/public/assets/backgrounds/in/tajmahal_dark.png",
+          "hash": "227008296163559221"
+        },
+        {
+          "file": "web/public/assets/backgrounds/in/temple.png",
+          "hash": "10647918213395157993"
+        },
+        {
+          "file": "web/public/assets/music_images/Designer (1).jpeg",
+          "hash": "8457668016418004724"
+        },
+        {
+          "file": "web/public/assets/music_images/Designer (2).jpeg",
+          "hash": "1082535389320485779"
+        },
+        {
+          "file": "web/public/assets/music_images/Designer (7).jpeg",
+          "hash": "11282003941303026688"
+        },
+        {
+          "file": "web/public/assets/music_images/Designer.jpeg",
+          "hash": "10438613026794750363"
+        },
+        {
+          "file": "web/public/assets/music_images/cafe_house.png",
+          "hash": "2196543127060138707"
+        },
+        {
+          "file": "web/public/assets/music_images/focus_hits.jpeg",
+          "hash": "12323798095281596623"
+        },
+        {
+          "file": "web/public/assets/music_images/indie_study.jpeg",
+          "hash": "8767016493075237652"
+        },
+        {
+          "file": "web/public/assets/music_images/lofi_mix.png",
+          "hash": "7365613213185370070"
+        },
+        {
+          "file": "web/public/assets/music_images/mellow_morning.png",
+          "hash": "7966224139136156390"
+        },
+        {
+          "file": "web/public/assets/music_images/peaceful_piano.jpeg",
+          "hash": "4883429696195275545"
+        },
+        {
+          "file": "web/public/assets/music_images/peaceful_piano_old.jpeg",
+          "hash": "8017787106802268455"
+        },
+        {
+          "file": "web/public/assets/sounds/Forest Bonfire.mp3",
+          "hash": "16178594198399832227"
+        },
+        {
+          "file": "web/public/assets/sounds/Lightning Wings.mp3",
+          "hash": "6492150333812455971"
+        },
+        {
+          "file": "web/public/assets/sounds/Night Symphony with Traffic.mp3",
+          "hash": "12200312152035459398"
+        },
+        {
+          "file": "web/public/assets/sounds/Rain.mp3",
+          "hash": "8791645268133627533"
+        },
+        {
+          "file": "web/public/assets/sounds/cafe_vibes.mp3",
+          "hash": "14067887176133034845"
+        },
+        {
+          "file": "web/public/assets/sounds/vintage_train_chime.mp3",
+          "hash": "4011494438925157494"
+        },
+        {
+          "file": "web/public/bar_graph.png",
+          "hash": "4310546032658679094"
+        },
+        {
+          "file": "web/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "web/public/locales/en/common.json",
+          "hash": "16617184908470884919"
+        },
+        {
+          "file": "web/specs/index.spec.tsx",
+          "hash": "9752062192437246914"
+        },
+        {
+          "file": "web/src/components/ClockTimeComponent.tsx",
+          "hash": "15989189172184399574"
+        },
+        {
+          "file": "web/src/components/ContactsComponent.tsx",
+          "hash": "2403549774561908126"
+        },
+        {
+          "file": "web/src/components/CountdownTimer.tsx",
+          "hash": "15742437770154078791"
+        },
+        {
+          "file": "web/src/components/FocusThemeComponent.tsx",
+          "hash": "17485139890273891986"
+        },
+        {
+          "file": "web/src/components/FullScreenButtonComponent.tsx",
+          "hash": "5181642177595485946"
+        },
+        {
+          "file": "web/src/components/HomeThemeComponent.tsx",
+          "hash": "6773429167425793124"
+        },
+        {
+          "file": "web/src/components/MusicComponent.tsx",
+          "hash": "15952157178657880482"
+        },
+        {
+          "file": "web/src/components/MusicPlayerComponent.tsx",
+          "hash": "12943732879588123933"
+        },
+        {
+          "file": "web/src/components/PlaySoundHelper.tsx",
+          "hash": "7903183782421371450"
+        },
+        {
+          "file": "web/src/components/PlaylistHelper.tsx",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "web/src/components/PomodoroComponent.tsx",
+          "hash": "7436842883409782491"
+        },
+        {
+          "file": "web/src/components/PomodoroHelper.tsx",
+          "hash": "6410450084205024310"
+        },
+        {
+          "file": "web/src/components/SettingsComponent.tsx",
+          "hash": "17539993590387353552"
+        },
+        {
+          "file": "web/src/components/SoundComponent.tsx",
+          "hash": "1373719571471131830"
+        },
+        {
+          "file": "web/src/components/StatsComponent.tsx",
+          "hash": "6693900103888707100"
+        },
+        {
+          "file": "web/src/containers/ClockContainer.tsx",
+          "hash": "13894989860146988879"
+        },
+        {
+          "file": "web/src/containers/FocusThemeContainer.tsx",
+          "hash": "12156696306907852419"
+        },
+        {
+          "file": "web/src/containers/FullScreenButtonContainer.tsx",
+          "hash": "15822051236921191748"
+        },
+        {
+          "file": "web/src/containers/HomeThemeContainer.tsx",
+          "hash": "7021348000957226631"
+        },
+        {
+          "file": "web/src/containers/ModeButtonGroupContainer.tsx",
+          "hash": "5197455663707324835"
+        },
+        {
+          "file": "web/src/containers/MusicContainer.tsx",
+          "hash": "8035916367445450361"
+        },
+        {
+          "file": "web/src/containers/MusicPlayerContainer.tsx",
+          "hash": "1381138478519845870"
+        },
+        {
+          "file": "web/src/containers/NameForm.tsx",
+          "hash": "11042154151886703240"
+        },
+        {
+          "file": "web/src/containers/OptionBar.tsx",
+          "hash": "9960771488205771300"
+        },
+        {
+          "file": "web/src/containers/PomodoroContainer.tsx",
+          "hash": "11540640394879471347"
+        },
+        {
+          "file": "web/src/containers/ProfileContainer.tsx",
+          "hash": "10453718098692810347"
+        },
+        {
+          "file": "web/src/containers/QuoteContainer.tsx",
+          "hash": "6344845373158378192"
+        },
+        {
+          "file": "web/src/containers/SettingsContainer.tsx",
+          "hash": "13766127045110050466"
+        },
+        {
+          "file": "web/src/containers/SoundContainer.tsx",
+          "hash": "15342891988097126296"
+        },
+        {
+          "file": "web/src/containers/StatsContainer.tsx",
+          "hash": "11304379606353064945"
+        },
+        {
+          "file": "web/src/containers/TimerContainer.tsx",
+          "hash": "17232010293251709073"
+        },
+        {
+          "file": "web/src/domain/app.ts",
+          "hash": "3350022235265124240"
+        },
+        {
+          "file": "web/src/domain/audio.ts",
+          "hash": "9444306813982103555"
+        },
+        {
+          "file": "web/src/domain/clock.ts",
+          "hash": "2397213813943757540"
+        },
+        {
+          "file": "web/src/domain/pomodoro.ts",
+          "hash": "16369209244172493840"
+        },
+        {
+          "file": "web/src/pages/_app.tsx",
+          "hash": "15486134654596982944"
+        },
+        {
+          "file": "web/src/pages/index.module.css",
+          "hash": "4786619528779355986"
+        },
+        {
+          "file": "web/src/pages/index.tsx",
+          "hash": "7112640344355730848"
+        },
+        {
+          "file": "web/src/pages/styles.css",
+          "hash": "2866083945719690482"
+        },
+        {
+          "file": "web/src/stores/app-store.ts",
+          "hash": "14214305900098835047"
+        },
+        {
+          "file": "web/src/stores/audio-store.ts",
+          "hash": "14947799889612046787"
+        },
+        {
+          "file": "web/src/stores/music-store.ts",
+          "hash": "18101421604185471914"
+        },
+        {
+          "file": "web/src/stores/pomodoro-store.ts",
+          "hash": "12188505385065939590"
+        },
+        {
+          "file": "web/src/utils/background-utils.ts",
+          "hash": "1249432636529740294"
+        },
+        {
+          "file": "web/src/utils/config-utils.ts",
+          "hash": "17367096402570253597"
+        },
+        {
+          "file": "web/src/utils/music-utils.ts",
+          "hash": "3532456262797841786"
+        },
+        {
+          "file": "web/src/utils/sound-utils.ts",
+          "hash": "11376510189094558644"
+        },
+        {
+          "file": "web/tailwind.config.js",
+          "hash": "4601221482371480048"
+        },
+        {
+          "file": "web/tsconfig.json",
+          "hash": "9091524160016450022"
+        },
+        {
+          "file": "web/tsconfig.spec.json",
+          "hash": "8636949703417217507"
+        }
+      ],
+      "web-e2e": [
+        {
+          "file": "web-e2e/.eslintrc.json",
+          "hash": "3221422119017680556"
+        },
+        {
+          "file": "web-e2e/playwright.config.ts",
+          "hash": "12614365066198161486"
+        },
+        {
+          "file": "web-e2e/project.json",
+          "hash": "9466830335651075753"
+        },
+        {
+          "file": "web-e2e/src/example.spec.ts",
+          "hash": "16019101014373124625"
+        },
+        {
+          "file": "web-e2e/tsconfig.json",
+          "hash": "13921281020092875063"
+        }
+      ]
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { Drawer } from "flowbite-react";
+import { Drawer , DrawerHeader, DrawerItems} from "flowbite-react";
 import { getPlaylistURLbyName } from "../utils/music-utils";
 import { useEffect, useRef } from "react";
 
@@ -12,8 +12,8 @@ const MusicPlayerComponent = ({ show, handleHide, playlist }: IMusicPlayerCompon
 
   return (
     <Drawer open={show} onClose={handleHide} className="px-0 flex flex-col justify-between bg-background text-red-500">
-      <Drawer.Header className="px-4 text-green-500" title="Music" titleIcon={() => <></>} />
-      <Drawer.Items className="flex flex-col items-center justify-end h-1/2">
+      <DrawerHeader className="px-4 text-green-500" title="Music" titleIcon={() => <></>} />
+      <DrawerItems className="flex flex-col items-center justify-end h-1/2">
         <iframe
           src={getPlaylistURLbyName(playlist)}
           key={playlist}
@@ -27,7 +27,7 @@ const MusicPlayerComponent = ({ show, handleHide, playlist }: IMusicPlayerCompon
           }}
         >
         </iframe>
-      </Drawer.Items>
+      </DrawerItems>
     </Drawer>
   );
 }

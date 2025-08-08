@@ -6,7 +6,7 @@ import { useAudioStore } from "../stores/audio-store"
 export const PlaySoundHelper = () => {
 
   const { playMode, soundSelected } = useAudioStore()
-  const audioRef = useRef<HTMLAudioElement>();
+  const audioRef = useRef<HTMLAudioElement| null>(null);
 
   useEffect(() => {
     if (playMode === PlayMode.Playing) {

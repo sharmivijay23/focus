@@ -1,0 +1,206 @@
+{
+  "web": {
+    "root": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.start": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.start.continuous": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.start.options": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.start.dependsOn": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.start.executor": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.start.options.cwd": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.start.options.command": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.serve-static": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.serve-static.continuous": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.serve-static.options": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.serve-static.dependsOn": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.serve-static.executor": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.serve-static.options.cwd": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.serve-static.options.command": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.watch-deps": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.watch-deps.continuous": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.watch-deps.dependsOn": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.watch-deps.executor": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.watch-deps.options": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.watch-deps.options.command": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "name": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.buildTarget": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.dev": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.dev": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.dev.executor": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.dev.options": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.dev.options.buildTarget": [
+      "web/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "web-e2e": {
+    "root": [
+      "web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "// targets": [
+      "web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "implicitDependencies": [
+      "web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "implicitDependencies.web": [
+      "web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "web-e2e/project.json",
+      "nx/core/project-json"
+    ]
+  }
+}

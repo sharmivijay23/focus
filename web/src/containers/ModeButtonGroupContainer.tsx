@@ -1,4 +1,4 @@
-import { Button } from "flowbite-react";
+import { Button, ButtonGroup } from "flowbite-react";
 import { HiOutlineHome, HiOutlineLightBulb  } from "react-icons/hi";
 import useAppStore from "../stores/app-store";
 import { Mode } from "../domain/app";
@@ -16,14 +16,14 @@ const ModeButtonGroupContainer = () => {
   }
 
   return (
-    <Button.Group>
+    <ButtonGroup>
       <Button onClick={setHomeMode} color="outline">
         <HiOutlineHome className={iconClasses} />
       </Button>
       <Button onClick={setFocusMode} color="outline">
         <HiOutlineLightBulb  className={iconClasses} />
       </Button>
-    </Button.Group>
+    </ButtonGroup>
   )
 }
 
