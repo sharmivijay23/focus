@@ -19,56 +19,56 @@
         "hash": "7663861978715868291"
       },
       {
-        "file": ".eslintrc.json",
-        "hash": "17866138117546000433"
-      },
-      {
-        "file": ".github/workflows/ci.yml",
-        "hash": "18231266741953795743"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "13675722232561398191"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "16448050467312557263"
-      },
-      {
         "file": ".prettierrc",
         "hash": "16267754514737964994"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "4422400126597322578"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "12090865539800809320"
-      },
-      {
-        "file": "README.md",
-        "hash": "11399167651843982878"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "3494843969422251966"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
       },
       {
         "file": "nx.json",
         "hash": "16923815289826188569"
       },
       {
-        "file": "package.json",
-        "hash": "9654995579644321738"
+        "file": "jest.config.ts",
+        "hash": "3494843969422251966"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "17866138117546000433"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
       },
       {
         "file": "tsconfig.base.json",
         "hash": "16936441711144470533"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "12090865539800809320"
+      },
+      {
+        "file": "package.json",
+        "hash": "9654995579644321738"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "16448050467312557263"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "18231266741953795743"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "4422400126597322578"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13675722232561398191"
+      },
+      {
+        "file": "README.md",
+        "hash": "11399167651843982878"
       },
       {
         "file": "yarn.lock",
@@ -107,7 +107,7 @@
         },
         {
           "file": "web/project.json",
-          "hash": "13534751206857163935"
+          "hash": "9595228279544616726"
         },
         {
           "file": "web/public/.gitkeep",
