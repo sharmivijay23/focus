@@ -27,7 +27,7 @@
               "{options.outputPath}"
             ],
             "options": {
-              "outputPath": "dist/apps/web/.next"
+              "outputPath": "dist/apps/web"
             },
             "configurations": {},
             "parallelism": true
@@ -25152,5 +25152,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1754628061315
+  "computedAt": 1754628914949
 }
